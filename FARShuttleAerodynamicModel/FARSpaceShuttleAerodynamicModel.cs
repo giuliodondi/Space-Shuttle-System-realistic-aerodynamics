@@ -151,7 +151,11 @@ namespace ferram4
 
         protected override Vector3d CalculateAerodynamicCenter(double MachNumber, double AoA, Vector3d WC)
         {
-            //very brutal
+            double forwardShiftMetres = 1.0;
+            double shiftFac = Math.Max(0, Math.Min(1, 0.667 * (MachNumber - 1)));
+
+            WC += forwardShiftMetres * shiftFac * ParallelInPlane;
+
             return WC;
         }
 
