@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Airlock
   - Ladder
+  - Icon_Hidden
   layers:
   - Default
   - TransparentFX
